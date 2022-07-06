@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  borg:
+    image: alpine
+    build:
+      context: ./
+    volumes:
+      - '.:/app/'
+    command: sh src/index.sh
+    env_file: .env
